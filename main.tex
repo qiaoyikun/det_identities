@@ -5,5 +5,142 @@
 \section{Introduction}
 {
     We prove some polynomial identities for determinants. 
+
+    $\alpha,\beta,\gamma,\delta,\epsilon,\zeta,\eta,\theta,\iota,\kappa,\lambda,\zeta,\eta,\xi$ $o$ $\pi,\rho,\sigma,\tau,\upsilon,\phi,\chi,\psi,\omega$
+
+    Steps are the following. 
+    \begin{itemize}
+        \item For $1\leq \zeta\leq \alpha$, expand $\det\begin{bmatrix}
+            i_1&\cdots&i_\alpha&i_\zeta&r_1&\cdots&r_\beta\\
+            j_1&\cdots&j_\alpha&j_{\alpha+1}&c_1&\cdots&c_\beta
+        \end{bmatrix}$ along row $i_\zeta$. 
+
+        \item For $1\leq\eta\leq\alpha+1$, expand $\det\begin{bmatrix}
+            i_1&\cdots&i_\alpha&i_{\alpha+1}&r_1&\cdots&r_\beta\\
+            j_1&\cdots&j_\alpha&j_{\alpha+1}&\cdots&j_\eta&\cdots
+        \end{bmatrix}$ along column $j_\eta$, where $j_\eta$ replaces $c_\lambda$ for some $1\leq\lambda\leq\beta$. 
+
+        \item Expand $\det\begin{bmatrix}
+            i_1&\cdots&i_\alpha&i_{\alpha+1}&r_1&\cdots&r_\beta\\
+            j_1&\cdots&j_\alpha&j_{\alpha+1}&c_1&\cdots&c_\beta
+        \end{bmatrix}$ along row $i_{\alpha+1}$ and expand it along column $c_\lambda$ for some $1\leq \lambda\leq \beta$. 
+    \end{itemize}
+}
+
+\section{Relative determinant}
+{
+}
+
+\section{Induction formula}
+{
+    \subsection{step 1}
+    {
+        We have equations for $\zeta=1,\cdots,\alpha$ 
+        \begin{align}
+            0={}&(-1)^\alpha\sum_{\eta=1}^\alpha(-1)^{\eta-1}a^{i_\zeta}_{j_\eta}\det\begin{bmatrix}
+                i_1\;\cdots&i_\alpha&r_1\;\cdots\; r_\beta\\
+                \cdots\widehat{j_\eta}\cdots&j_{\alpha+1}&c_1\;\cdots\; c_\beta
+            \end{bmatrix}\\
+            &+a^{i_\zeta}_{j_{\alpha+1}}\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_1\;\cdots\;r_\beta\\
+                j_1\;\cdots\;j_\alpha&c_1\;\cdots\;c_\beta
+            \end{bmatrix}\\
+            &+\sum_{\lambda=1}^\beta(-1)^\lambda a^{i_\zeta}_{c_\lambda}\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_1&\cdots\;r_\beta\\
+                j_1\;\cdots\;j_\alpha&j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}
+        \end{align}
+        We can solve such that for $\eta=1,\cdots,\alpha$
+        \begin{align}
+            &\det\begin{bmatrix}
+                i_1\;\cdots&i_\alpha&r_1\;\cdots\;r_\beta\\
+                \cdots\widehat{j_\eta}\cdots&j_{\alpha+1}&c_1\;\cdots\;c_\beta
+            \end{bmatrix}\\
+            ={}&\frac{1}{\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha\\
+                j_1\;\cdots\;j_\alpha
+            \end{bmatrix}}\Bigg(\det\begin{bmatrix}
+                i_1\;\cdots&i_\alpha\\
+                \cdots\widehat{j_\eta}\cdots&j_{\alpha+1}
+            \end{bmatrix}\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_1\;\cdots\;r_\beta\\
+                j_1\;\cdots\;j_\alpha&c_1\;\cdots\;c_\beta
+            \end{bmatrix}\\
+            &\hspace{3eM}+\sum_{\lambda=1}^\beta(-1)^\lambda\det\begin{bmatrix}
+                i_1\;\cdots&i_\alpha\\
+                \cdots\widehat{j_\eta}\cdots&c_\lambda
+            \end{bmatrix}\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_1&\cdots\;r_\beta\\
+                j_1\;\cdots\;j_\alpha&j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}\Bigg)
+        \end{align}
+    }
+
+    \subsection{step 2}
+    {
+        We have equations for $\eta=1,\cdots,\alpha+1$ 
+        \begin{align}
+            0&=\sum_{\zeta=1}^{\alpha+1}(-1)^{\lambda+\alpha+\zeta+1}a^{i_\zeta}_{j_\eta}\det\begin{bmatrix}
+                \cdots\widehat{i_\zeta}\cdots&r_1&\cdots\;r_\beta\\
+                j_1\;\cdots&j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}\\
+            &+\sum_{\kappa=1}^\beta(-1)^{\kappa+\lambda}a^{r_\kappa}_{j_\eta}\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}&\cdots\widehat{r_\kappa}\cdots\\
+                j_1\;\cdots\;j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}. 
+        \end{align}
+        We can solve such that for $\zeta=1,\cdots,\alpha+1$ 
+        \begin{align}
+            &\det\begin{bmatrix}
+                \cdots\widehat{i_\zeta}\cdots&r_1&\cdots\;r_\beta\\
+                j_1\;\cdots&j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}\\
+            ={}&\frac{1}{\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}\\
+                j_1\;\cdots\;j_{\alpha+1}
+            \end{bmatrix}}\sum_{\kappa=1}^\beta(-1)^{\kappa+1}\det\begin{bmatrix}
+                \cdots\widehat{i_\zeta}\cdots&r_\kappa\\
+                j_1\;\cdots&j_{\alpha+1}
+            \end{bmatrix}\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}&\cdots\widehat{r_\kappa}\cdots\\
+                j_1\;\cdots\;j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}
+        \end{align}
+    }
+
+    \subsection{step 3}
+    {
+        We finally have 
+        \begin{align}
+            &\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_1\;\cdots\;r_\beta\\
+                j_1\;\cdots\;j_\alpha&c_1\;\cdots\;c_\beta
+            \end{bmatrix}\\
+            ={}&\frac{1}{\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}\\
+                j_1\;\cdots\;j_{\alpha+1}
+            \end{bmatrix}}\sum_{\kappa,\lambda=1}^\beta(-1)^{\kappa+\lambda}\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&r_\kappa\\
+                j_1\;\cdots\;j_\alpha&c_\lambda
+            \end{bmatrix}\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}&\cdots\widehat{r_\kappa}\cdots\\
+                j_1\;\cdots\;j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}\\
+            &-(\beta-1)\frac{\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha\\
+                j_1\;\cdots\;j_\alpha
+            \end{bmatrix}}{\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}\\
+                j_1\;\cdots\;j_{\alpha+1}
+            \end{bmatrix}^2}\sum_{\kappa=1}^\beta(-1)^{\kappa+\lambda}\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}&r_\kappa\\
+                j_1\;\cdots\;j_{\alpha+1}&c_\lambda
+            \end{bmatrix}\det\begin{bmatrix}
+                i_1\;\cdots\;i_{\alpha+1}&\cdots\widehat{r_\kappa}\cdots\\
+                j_1\;\cdots\;j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}
+        \end{align}
+        where the free index $\lambda$ can be $1,\cdots,\beta$. 
+    }
 }
 \end{document}
