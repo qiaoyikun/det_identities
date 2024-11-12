@@ -140,7 +140,152 @@
                 j_1\;\cdots\;j_{\alpha+1}&\cdots\widehat{c_\lambda}\cdots
             \end{bmatrix}
         \end{align}
-        where the free index $\lambda$ can be $1,\cdots,\beta$. 
+        where the free index $\lambda$ can be $1,\cdots,\beta$. For rows $x_1,\cdots,x_n$ and rows $y_1,\cdots,y_n$, denote 
+        \begin{align}
+            \widetilde{\det}_\alpha\begin{bmatrix}
+                x_1\;\cdots\;x_n\\y_1\;\cdots\;y_n
+            \end{bmatrix}:=\frac{\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha&x_1\;\cdots\;x_n\\
+                j_1\;\cdots\;j_\alpha&y_1\;\cdots\;y_n
+            \end{bmatrix}}{\det\begin{bmatrix}
+                i_1\;\cdots\;i_\alpha\\
+                j_1\;\cdots\;j_\alpha
+            \end{bmatrix}}. 
+        \end{align}
+        Then the above equation is 
+        \begin{align}
+            \widetilde{\det}_\alpha\begin{bmatrix}
+                r_1\;\cdots\;r_\beta\\
+                c_1\;\cdots\;c_\beta
+            \end{bmatrix}={}&\sum_{\kappa,\lambda=1}^\beta(-1)^{\kappa+\lambda}\widetilde{\det}_\alpha\begin{bmatrix}
+                r_\kappa\\
+                c_\lambda
+            \end{bmatrix}\widetilde{\det}_{\alpha+1}\begin{bmatrix}
+                \cdots\widehat{r_\kappa}\cdots\\
+                \cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}\\
+            &-(\beta-1)\sum_{\kappa=1}^\beta(-1)^{\kappa+\lambda}\widetilde{\det}_{\alpha+1}\begin{bmatrix}
+                r_\kappa\\
+                c_\lambda
+            \end{bmatrix}\widetilde{\det}_{\alpha+1}\begin{bmatrix}
+                \cdots\widehat{r_\kappa}\cdots\\
+                \cdots\widehat{c_\lambda}\cdots
+            \end{bmatrix}. 
+        \end{align}
+
+        \begin{proof}
+            For rows $x_1,\cdots,x_n$ and rows $y_1,\cdots,y_n$, denote 
+            \begin{align}
+                \widetilde{\det}_\alpha\begin{bmatrix}
+                    x_1\;\cdots\;x_n\\y_1\;\cdots\;y_n
+                \end{bmatrix}:=\frac{\det\begin{bmatrix}
+                    i_1\;\cdots\;i_\alpha&x_1\;\cdots\;x_n\\
+                    j_1\;\cdots\;j_\alpha&y_1\;\cdots\;y_n
+                \end{bmatrix}}{\det\begin{bmatrix}
+                    i_1\;\cdots\;i_\alpha\\
+                    j_1\;\cdots\;j_\alpha
+                \end{bmatrix}}. 
+            \end{align}
+            Then $\widetilde{\det}_\alpha$ and $\det$ satisfy similar polynomial equations. In particular we expand $\widetilde{\det}_\alpha\begin{bmatrix}
+                i_{\alpha+1}&r_1\;\cdots\;r_\beta\\
+                j_{\alpha+1}&c_1\;\cdots\;c_\beta
+            \end{bmatrix}$ along row $r_\kappa$ for $\kappa=1,\cdots,\beta$ and along column $j_{\alpha+1}$. We have 
+            \begin{align}
+                \widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&r_1\;\cdots\;r_\beta\\
+                    j_{\alpha+1}&c_1\;\cdots\;c_\beta
+                \end{bmatrix}={}& (-1)^\kappa\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    c_1&\cdots\;c_\beta
+                \end{bmatrix}\\
+                &+\sum_{\lambda=1}^\beta(-1)^{\kappa+\lambda}\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    c_\lambda
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    j_{\alpha+1}&\cdots\;\widetilde{c_\lambda}\;\cdots
+                \end{bmatrix}
+            \end{align}
+            and 
+            \begin{align}
+                \widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&r_1\;\cdots\;r_\beta\\
+                    j_{\alpha+1}&c_1\;\cdots\;c_\beta
+                \end{bmatrix}={}& \widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_1\;\cdots\;r_\beta\\
+                    c_1\;\cdots\;c_\beta
+                \end{bmatrix}\\
+                &+\sum_{\kappa=1}^\beta(-1)^\kappa\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    c_1&\cdots\;c_\beta
+                \end{bmatrix}. 
+            \end{align}
+            We then have 
+            \begin{align}
+                \widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_1\;\cdots\;r_\beta\\
+                    c_1\;\cdots\;c_\beta
+                \end{bmatrix}={}&(-1)^\kappa\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    c_1&\cdots\;c_\beta
+                \end{bmatrix}\\
+                &+\sum_{\lambda=1}^\beta(-1)^{\kappa+\lambda}\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    c_\lambda
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    j_{\alpha+1}&\cdots\;\widehat{c_\lambda}\;\cdots
+                \end{bmatrix}\\
+                &-\sum_{\kappa=1}^\beta(-1)^\kappa\widetilde{\det}_\alpha\begin{bmatrix}
+                    r_\kappa\\
+                    j_{\alpha+1}
+                \end{bmatrix}\widetilde{\det}_\alpha\begin{bmatrix}
+                    i_{\alpha+1}&\cdots\;\widehat{r_\kappa}\;\cdots\\
+                    c_1&\cdots\;c_\beta
+                \end{bmatrix}.
+            \end{align}
+        \end{proof}
     }
+}
+
+\appendix
+\section{Induction formula}
+{
+    Consider the function $\delta_\kappa:\{1,\cdots,\beta-1\}\to\{1,\cdots,\beta\}$ skipping $\kappa$ for $1\leq \kappa\leq\beta$. Let $F(\kappa_1,\kappa_2)$ be a function of two variables. Denote 
+    \begin{align*}
+        \mathrm{ord}(\kappa_1,\kappa_2):=\begin{cases}
+            1,&\kappa_1<\kappa_2\\
+            -1,&\kappa_1>\kappa_2. 
+        \end{cases}
+    \end{align*}
+    We have 
+    \begin{align*}
+        \sum_{\kappa=1}^\beta\sum_{\kappa'=1}^{\beta-1}(-1)^{\kappa+\kappa'}F(\kappa,\delta_\kappa(\kappa'))=-\sum_{\kappa_1\ne\kappa_2}(-1)^{\kappa_1+\kappa_2}\mathrm{ord}(\kappa_1,\kappa_2)F(\kappa_1,\kappa_2)
+    \end{align*}
+
+    \begin{align*}
+        &\sum_{\kappa_1=1}^\beta\sum_{\kappa_2=1}^{\beta-1}\sum_{\kappa_3=1}^{\beta-2}(-1)^{\kappa_1+\kappa_2+\kappa_3}F\big(\kappa_1,\delta_{\kappa_1}(\kappa_2),\delta_{\kappa_1}\delta_{\kappa_2}(\kappa_3)\big)\\
+        =&-\sum_{1\leq k_1<k_2<k_3\leq \beta}(-1)^{k(1)+k(2)+k(3)}\sum_{\sigma\in S_3}\mathrm{sgn}(\sigma)F\big(k(\sigma(1)),k(\sigma(2)),k(\sigma(3))\big)
+    \end{align*}
+
+    \begin{align*}
+        &\sum_{\kappa_1=1}^\beta\sum_{\kappa_2=1}^{\beta-1}\cdots\sum_{\kappa_m=1}^{\beta-m+1}(-1)^{\kappa_1+\cdots+\kappa_m}F\Big(\kappa_1,\delta_{\kappa_1}(\kappa_2),\cdots,\delta_{\kappa_1}\delta_{\kappa_2}\cdots\delta_{\kappa_{m-1}}(\kappa_m)\Big)\\
+        ={}&(-1)^{\binom{m}{2}}\sum_{1\leq k_1<\cdots<k_m\leq \beta}(-1)^{k_1+\cdots+k_m}\sum_{\sigma\in S_m}\mathrm{sgn}(\sigma)F\Big(k_{\sigma(1)},\cdots,k_{\sigma(m)}\Big)
+    \end{align*}
 }
 \end{document}
