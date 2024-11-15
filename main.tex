@@ -287,5 +287,15 @@
         &\sum_{\kappa_1=1}^\beta\sum_{\kappa_2=1}^{\beta-1}\cdots\sum_{\kappa_m=1}^{\beta-m+1}(-1)^{\kappa_1+\cdots+\kappa_m}F\Big(\kappa_1,\delta_{\kappa_1}(\kappa_2),\cdots,\delta_{\kappa_1}\delta_{\kappa_2}\cdots\delta_{\kappa_{m-1}}(\kappa_m)\Big)\\
         ={}&(-1)^{\binom{m}{2}}\sum_{1\leq k_1<\cdots<k_m\leq \beta}(-1)^{k_1+\cdots+k_m}\sum_{\sigma\in S_m}\mathrm{sgn}(\sigma)F\Big(k_{\sigma(1)},\cdots,k_{\sigma(m)}\Big)
     \end{align*}
+
+    Consider the case when $F(x_1,\cdots,x_m)$ has the form 
+    \begin{align*}
+        F(x_1,\cdots,x_m)=F_1(x_1)\cdots F_m(x_m) F_{\mathrm{sym}}(x_1,\cdots,x_m)
+    \end{align*}
+    where $F_{\mathrm{sym}}$ is symmetric with respect to $S_m$. The identity becomes 
+    \begin{align*}
+        &\sum_{\kappa_1=1}^\beta\sum_{\kappa_2=1}^{\beta-1}\cdots\sum_{\kappa_m=1}^{\beta-m+1}(-1)^{\kappa_1+\cdots+\kappa_m}F\Big(\kappa_1,\delta_{\kappa_1}(\kappa_2),\cdots,\delta_{\kappa_1}\delta_{\kappa_2}\cdots\delta_{\kappa_{m-1}}(\kappa_m)\Big)\\
+        ={}&(-1)^{\binom{m}{2}}\sum_{1\leq k_1<\cdots<k_m\leq \beta}(-1)^{k_1+\cdots+k_m}\det\big(F_i(k_j)\big)F_{\mathrm{sym}}(k_1,\cdots,k_m). 
+    \end{align*}
 }
 \end{document}
