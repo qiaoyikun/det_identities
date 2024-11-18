@@ -263,6 +263,43 @@
     }
 }
 
+\section{Total expansion}
+{
+    \begin{equation*}
+        \begin{split}
+            \frac{\det\big[\begin{smallmatrix}
+                r_1\;\cdots\;r_\gamma\\
+                c_1\;\cdots\;c_\gamma
+            \end{smallmatrix}\big]}{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_\gamma\\
+                j_1\;\cdots\;j_\gamma
+            \end{smallmatrix}\big]}={}&\sum_{\rho,\sigma\in S_\gamma}\mathrm{sgn}(\rho\sigma)\prod_{\alpha=1}^\gamma\Bigg(\frac{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_{\alpha-1}&r_{\rho(\alpha)}\\
+                j_1\;\cdots\;j_{\alpha-1}&c_{\sigma(\alpha)}
+            \end{smallmatrix}\big]}{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_\alpha\\
+                j_1\;\cdots\;j_\alpha
+            \end{smallmatrix}\big]}\\
+            &-\frac{\gamma-\alpha}{\gamma-\alpha+1}\frac{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_{\alpha-1}\\
+                j_1\;\cdots\;j_{\alpha-1}
+            \end{smallmatrix}\big]{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_{\alpha+1}\\
+                j_1\;\cdots\;j_{\alpha+1}
+            \end{smallmatrix}\big]}}{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_\alpha\\
+                j_1\;\cdots\;j_\alpha
+            \end{smallmatrix}\big]^2}\frac{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_\alpha&r_{\rho(\alpha)}\\
+                j_1\;\cdots\;j_\alpha&c_{\sigma(\alpha)}
+            \end{smallmatrix}\big]}{\det\big[\begin{smallmatrix}
+                i_1\;\cdots\;i_{\alpha+1}\\
+                j_1\;\cdots\;j_{\alpha+1}
+            \end{smallmatrix}\big]}\Bigg)
+        \end{split}
+    \end{equation*}
+}
+
 \appendix
 \section{Induction formula}
 {
